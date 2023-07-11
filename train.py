@@ -24,7 +24,6 @@ batch_size = 32
 epochs = 1000
 alpha = 30.0
 beta = 12.0
-gamma = 2.0
 
 cuda_available = torch.cuda.is_available()
 device_ids = [0, 1, 2]       # multi-GPU
