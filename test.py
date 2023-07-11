@@ -127,14 +127,4 @@ def evaluation(net, test_dataset, criterion, A_cat, save_dir=None):
         print('Specificity for tumor core is ')
         print(sum(spec_tumor_core) / (len(spec_tumor_core) * 1.0))
 
-        for i in range(class_num):
-            iou_i = []
-            for iou in iou_class_all:
-                iou_i.append(iou[i])
-            average_iou_label_i = sum(iou_i) / (len(iou_i) * 1.0)
-            if i == 3:  # label 4
-                print('Iou for label ' + str(i+1) + '   is   ' + str(average_iou_label_i))
-                continue
-            print('Iou for label ' + str(i) + '   is   ' + str(average_iou_label_i))
-
     return average_dice_whole_tumor, test_loss
