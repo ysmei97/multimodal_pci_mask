@@ -20,7 +20,7 @@ def hscore_A(f, g, A):
     return -corr + torch.sum(s)/2.0
 
 
-def gredient_A(f, g, A):
+def gredient_A(f, g, A, gamma=2.0):
     """Calculate the gradient of matrix for further update"""
     f0 = f - torch.mean(f, 0)
     g0 = g - torch.mean(g, 0)
